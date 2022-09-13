@@ -23,6 +23,9 @@ $(function() {
 
         stringArrayPosition(userName); 
 
+        // window.alert('YOU HAVE SOOO MUCH WOW!!');
+        // return('you have soooo much WOW!!!')
+
         });
 
         $('#btnClear').click(function(){
@@ -38,6 +41,8 @@ $(function() {
     function reverseString(stringVal){
         var revString = stringVal.split("").reverse().join("");
        return revString; 
+    //    return("you have soooo much WOW!!!");
+
     }
 
     function thirdLetter(stringVal){
@@ -63,6 +68,20 @@ $(function() {
         }
 
 
+    }
+
+    function getSpiritAnimal(x){
+        //flow control: case switch, loop, if/then
+        // if name starts with A,B,C, etc then _ animal 
+        if(x.nameLength > 4){
+            //execute some code (print animal name w link)
+            return "You are a cat";
+        }
+        else if(x.nameLength < 7) {
+            return "your spirir animal is an alligator";
+        } else {
+            return "you are a panda";
+        }
     }
 
 });
