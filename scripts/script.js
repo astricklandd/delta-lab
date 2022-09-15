@@ -12,6 +12,7 @@ $(function() {
         nameLength = getStringLength(userName);
         nameMsg = "The Length of your name is: ";
         $('#nameOutput').append(nameMsg + nameLength + "<br/>"); 
+        
 
         // console.log(reverseString(userName)); 
 
@@ -19,12 +20,19 @@ $(function() {
         nameMsg = "Your Name reversed letters is: ";
         $('#nameOutput').append(nameMsg + nameReverse + "<br/>"); 
 
-        console.log(thirdLetter(userName)); 
+        // // console.log(thirdLetter(userName)); 
+        // letterThird = thirsLetter(userName);
+        // nameMsg = "Your Name's Third Letter is: ";
+        // $('#nameOutput').append(nameMsg + letterThird + "<br/>"); 
+
 
         stringArrayPosition(userName); 
 
         // window.alert('YOU HAVE SOOO MUCH WOW!!');
         // return('you have soooo much WOW!!!')
+        animalSpirit = spiritAnimal(userName);
+        nameMsg = "Your spirit animal is: ";
+        $('#nameOutput').append(nameMsg + animalSpirit + "<br/>");
 
         });
 
@@ -46,8 +54,8 @@ $(function() {
     }
 
     function thirdLetter(stringVal){
-        
-       return thirdString; var thirdString = stringVal[2]; 
+        var thirdString = stringVal[2];
+       return thirdString; 
     }
 
     function clearElement(elementId, elementType){
@@ -69,19 +77,17 @@ $(function() {
 
 
     }
-
-    function getSpiritAnimal(x){
-        //flow control: case switch, loop, if/then
-        // if name starts with A,B,C, etc then _ animal 
-        if(x.nameLength > 4){
-            //execute some code (print animal name w link)
-            return "You are a cat";
-        }
-        else if(x.nameLength < 7) {
-            return "your spirir animal is an alligator";
-        } else {
-            return "you are a panda";
-        }
+function spiritAnimal() {
+    if(nameLength > 5){
+        return "Zebra";
+    }
+    else if(nameLength < 5) {
+        return "Panda";
+    } else {
+        return "Kangaroo";
     }
 
+}
+
 });
+
